@@ -1,4 +1,5 @@
-
+<x-main>
+    
     <span class="badge text-bg-warning">Registrati</span></h1>
 
   <form class="p-5 border rounded" action="{{ route('register') }}" method="POST">
@@ -36,4 +37,5 @@
     <button type="submit" class="btn btn-dark">Registrati</button>
     <a href="{{ route('login') }}" class="btn btn-outline-dark">Sei gia registrato? Clicca qui</a>
   </form>
-  
+
+</x-main>

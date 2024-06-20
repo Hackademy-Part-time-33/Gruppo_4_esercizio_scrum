@@ -1,4 +1,5 @@
-
+<x-main>
+   
     <span class="badge text-bg-warning">Login</span></h1>
   <form method="POST" action="{{route('login')}}">
       @csrf
@@ -17,4 +18,6 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+   
+</x-main>
   

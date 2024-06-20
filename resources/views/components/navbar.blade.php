@@ -12,6 +12,17 @@
                 <li class="nav-item"><a class="nav-link" href="{{route('homepage')}}">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('homepage')}}">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('homepage')}}">FAQ</a></li>
+                @auth
+                <p class="float-end">Ciao {{Auth::user()->name}}</p> 
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                  <button class="btn btn-warning float-end">Logout</button>
+                </form>
+                @else
+                <li class="nav-item"><a class=" align-self-end btn btn-warning" href="{{route('register')}}">Register</a></li>
+                <li class="nav-item"><a class=" align-self-end btn  btn-warning" href="{{route('login')}}">Login</a></li>
+                @endauth
+              
             </ul>
         </div>
     </div>
